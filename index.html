@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+
+<body>
+
+
+
+    <section class="top-nav">
+        <div>
+            <a href="index.html" class="logo mr-auto"><img src="/assets/logo.png" alt="icon" class="img-fluid"></a>
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li>Account</li>
+            <li>Streaming History</li>
+            <li>Order</li>
+            <li>Transaction</li>
+            <li>Shipment</li>
+            <li>Payment</li>
+            <li>History</li>
+        </ul>
+    </section>
+
+
+    <div id="mySidenav" class="sidenav">
+        <div style="display:flex">
+            <div style="display:flex">
+                <div> <img src="/assets/logo.png" alt="logo"
+                        style="width:40px; margin-left: 17px; top:40px; position: absolute;"></div>
+                <div>
+                    <h3 style="margin:-14px 0 0 73px;">Percual</h3>
+                </div>
+            </div>
+
+            <a href="javascript:void(0)" id="openbtn" onclick="openNav()"><i class="arrow right"></i></a>
+            <a href="javascript:void(0)" id="closebtn" onclick="closeNav()"><i class="arrow left"></i></a>
+        </div>
+        <div id="nav-heading" style="height:45px;">
+            <h2 class="sideNav-heading">Setting</h2>
+        </div>
+        <!-- <div>
+            <ul style="display:inline">
+                <li style="text-decoration: none; display:inline" class="sideNav-verticalbarnew"><span
+                        class="sideNav-horizontalBar"><img src="/assets/user.png" alt="icon" class="img"><span><a
+                                href="#" class="sidenavLinks">Account</a></span> </li>
+            </ul>
+        </div> -->
+        <div>
+            <div class="sideNav-verticalbar">
+                <div style="display:flex;" class="sideNav-horizontalBar">
+                    <img src="/assets/user.png" alt="icon" class="img"><a href="#" class="sidenavLinks">Account</a>
+                </div>
+            </div>
+            <div class="sideNav-verticalbar">
+                <div style="display:flex;" class="sideNav-horizontalBar">
+                    <img src="/assets/history.png" alt="icon" class="img"><a href="#" class="sidenavLinks">Streaming
+                        History</a>
+                </div>
+            </div>
+            <div class="sideNav-verticalbar">
+                <div style="display:flex;" class="sideNav-horizontalBar">
+                    <img src="/assets/sent.png" alt="icon" class="img"><a href="#" class="sidenavLinks">Order</a>
+                </div>
+            </div>
+            <div class="sideNav-verticalbar">
+                <div style="display:flex;" class="sideNav-horizontalBar">
+                    <img src="/assets/money-exchange.png" alt="icon" class="img"><a href="#"
+                        class="sidenavLinks">Transaction</a>
+                </div>
+            </div>
+            <div class="sideNav-verticalbar">
+                <div style="display:flex;" class="sideNav-horizontalBar">
+                    <img src="/assets/money-exchange.png" alt="icon" class="img"><a href="#"
+                        class="sidenavLinks">Shipment</a>
+                </div>
+            </div>
+            <div class="sideNav-verticalbar">
+                <div style="display:flex;" class="sideNav-horizontalBar">
+                    <img src="/assets/money-exchange.png" alt="icon" class="img"><a href="#"
+                        class="sidenavLinks">Payment</a>
+                </div>
+            </div>
+            <div class="sideNav-verticalbar">
+                <div style="display:flex;" class="sideNav-horizontalBar">
+                    <img src="/assets/money-exchange.png" alt="icon" class="img"><a href="#"
+                        class="sidenavLinks">History</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="topnav">
+            <div class="search-container">
+                <form id="searchbarMargin">
+                    <input type="text" placeholder="Search Now" name="search" id="searchBox">
+                    <button type="button" onclick="mySearch()"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="links-sec" style="display:flex;">
+                <div style="margin: 5px;"><img src="/assets/shopping-cart.png"></div>
+                <div style="margin: 5px; font-size: 20px;"><i class="fa fa-bell-o" aria-hidden="true"
+                        style="color:gray"></i></div>
+                <div id="account-holder">Jonh Doe</div>
+                <img src="assets/account-holder.png" style="width:35px; height:35px">
+            </div>
+        </div>
+        <div class="top-bar" style="display:flex; margin: 0px 20px">
+            <div class="top-bar-link">
+                <h3 class="arrow left"></h3>
+            </div>
+            <div class="top-bar-link">
+                <h3>Dashboard</h3>
+            </div>
+            <div class="top-bar-link">
+                <h3>Earnings</h3>
+            </div>
+            <div class="top-bar-link">
+                <h3>Your Products</h3>
+            </div>
+            <div class="top-bar-link">
+                <h3>Shop</h3>
+            </div>
+            <div class="top-bar-link">
+                <h3>Setting</h3>
+            </div>
+        </div>
+        <hr class="hr">
+        <h2 style="">Streaming History</h2>
+
+        <table>
+            <thead>
+                <tr class="table-cols">
+                    <th class="table-col firstCol">#</th>
+                    <th class="table-col">Song Info</th>
+                    <th class="table-col">Album Name</th>
+                    <th class="table-col">Last Played</th>
+                    <th class="table-col lastCol"># Of Streams</th>
+                </tr>
+            </thead>
+            <tbody id="data-output"></tbody>
+        </table>
+    </div>
+    <!-- <script>
+        var searchInput = document.getElementById('searchBox').value;
+        searchInput.addEventListener('keyup', function () {
+            var keyword = this.value
+            console.log(keyword)
+        })
+        if (searchInput === "" || searchInput === undefined) {
+
+        } else {
+            console.log(searchInput)
+        }
+    </script> -->
+
+</body>
+
+</html>
